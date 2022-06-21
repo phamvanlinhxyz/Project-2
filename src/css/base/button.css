@@ -1,0 +1,63 @@
+.td-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: none;
+  cursor: pointer;
+  border: 1px solid transparent;
+}
+
+/* CSS size button */
+.td-btn-sm {
+  padding: 0 8px;
+  height: 24px;
+  border-radius: 3px;
+}
+.td-btn-md {
+  padding: 0 12px;
+  height: 28px;
+  border-radius: 4px;
+}
+.td-btn-lg {
+  padding: 0 16px;
+  height: 32px;
+  border-radius: 6px;
+}
+
+/* CSS màu button */
+.td-btn-prim {
+  background-color: #31c48d;
+  border-color: #84e1bc;
+  color: #fff;
+}
+
+.td-btn-danger {
+  background-color: #f25c54;
+  border-color: #e5989b;
+  color: #fff;
+}
+
+.td-btn-second {
+  background-color: #fff;
+  border-color: #e6e6e6;
+}
+
+/* CSS hình button */
+.td-btn-sm.td-btn-square {
+  width: 24px;
+  height: 24px;
+  padding: 0;
+}
+.td-btn-md.td-btn-square {
+  width: 28px;
+  height: 28px;
+  padding: 0;
+}
+.td-btn-lg.td-btn-square {
+  width: 32px;
+  height: 32px;
+  padding: 0;
+}
+.td-btn-circle {
+  border-radius: 100rem;
+}

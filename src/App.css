@@ -1,38 +1,89 @@
+/* Import */
+@import url(./css/layouts/navbar.css);
+@import url(./css/layouts/todo.css);
+@import url(./css/base/textarea.css);
+@import url(./css/base/button.css);
+@import url(./css/todo/dialog.css);
+
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  height: 100vh;
   display: flex;
   flex-direction: column;
+}
+
+/* CSS */
+h3 {
+  margin: 0;
+}
+
+span {
+  font-size: 85%;
+  opacity: 0.8;
+}
+
+/* Main */
+.main {
+  margin-top: 40px;
+  margin-bottom: 30px;
+  padding: 0 100px;
+  display: flex;
+  flex: 1;
+}
+
+.main-column {
+  width: calc(33.3333% - 20px);
+  margin: 0 20px;
+  padding: 12px;
+  border: 1px solid #e6e6e6;
+  border-radius: 12px;
+}
+
+.td-d-none {
+  display: none;
+}
+
+.td-d-flex-row {
+  display: flex;
+  flex-direction: row;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.td-justify-content-end {
+  justify-content: flex-end;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.td-mi-sm {
+  margin-inline: 4px;
+}
+
+.td-mi-md {
+  margin-inline: 6px;
+}
+
+.td-mi-lg {
+  margin-inline: 8px;
+}
+
+.td-ml-sm {
+  margin-left: 4px;
+}
+
+.td-ml-md {
+  margin-left: 6px;
+}
+
+.td-ml-lg {
+  margin-left: 8px;
+}
+
+.td-mr-sm {
+  margin-right: 4px;
+}
+
+.td-mr-md {
+  margin-right: 6px;
+}
+
+.td-mr-lg {
+  margin-right: 8px;
 }

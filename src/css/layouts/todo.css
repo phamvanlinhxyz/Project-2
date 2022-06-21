@@ -1,0 +1,28 @@
+/* List todo */
+.list-todo-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 28px;
+}
+
+/* Single todo */
+.single-todo {
+  border: 1px solid #e6e6e6;
+  padding: 12px 16px;
+  border-radius: 6px;
+  margin-top: 12px;
+  display: flex;
+  align-items: center;
+}
+
+.single-todo-left {
+  width: calc(100% - 30px);
+}
+
+
+.td-date-time {
+  display: flex;
+  align-items: center;
+  margin-top: 4px;
+}

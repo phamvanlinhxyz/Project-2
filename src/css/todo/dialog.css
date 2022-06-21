@@ -1,0 +1,42 @@
+.td-cofirm-dialog {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.td-dialog-bg {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #00000024;
+}
+
+.td-dialog-content {
+  background-color: #FFF;
+  z-index: 100;
+  padding: 20px;
+  border-radius: 8px;
+  width: 360px;
+}
+
+.td-dialog-content-text {
+  display: flex;
+  align-items: center;
+}
+
+.td-dialog-content-btn {
+  display: flex;
+  justify-content: space-between;
+}
+
+.td-text-icon {
+  font-size: 48px;
+  margin-right: 8px;
+}

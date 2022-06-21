@@ -1,0 +1,14 @@
+/* Nav bar */
+.nav-bar {
+  height: 60px;
+  border-bottom: 1px solid #e6e6e6;
+  padding: 0 120px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-shrink: 0;
+}
+
+.nav-left h3 {
+  font-size: 24px;
+}
