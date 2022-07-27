@@ -1,10 +1,13 @@
-import { createSlice, nanoid } from '@reduxjs/toolkit';
+import { createSlice, nanoid } from "@reduxjs/toolkit";
+import { DeleteMode } from "../../config";
 
 const todoSlice = createSlice({
-  name: 'todo',
+  name: "todo",
   initialState: {
     allTodo: [],
     selectedTodo: null,
+    deleteMode: DeleteMode.ONE,
+    dialogMsg: "",
   },
   reducers: {
     addTodo: {
@@ -16,7 +19,7 @@ const todoSlice = createSlice({
           payload: {
             id: nanoid(),
             title,
-            status: 'To do',
+            status: "Cần làm",
             updatedAt: new Date().toISOString(),
           },
         };
@@ -25,7 +28,7 @@ const todoSlice = createSlice({
     updateTodo(state, action) {
       state.allTodo = state.allTodo.map((td) => {
         if (td.id === action.payload) {
-          td.status === 'To do' ? (td.status = 'Doing') : (td.status = 'Done');
+          td.status === "Cần làm" ? (td.status = "Đang làm") : (td.status = "Hoàn thành");
           td.updatedAt = new Date().toISOString();
         }
         return td;
@@ -37,10 +40,22 @@ const todoSlice = createSlice({
     selectTodo(state, action) {
       state.selectedTodo = action.payload;
     },
-    deleteTodo(state, action) {
+    deleteTodo(state) {
       state.allTodo = state.allTodo.filter((todo) => {
         return todo.id !== state.selectedTodo;
       });
+    },
+    loadTodo(state, action) {
+      state.allTodo = action.payload;
+    },
+    deleteAll(state) {
+      state.allTodo = [];
+    },
+    setDeleteMode(state, action) {
+      state.deleteMode = action.payload;
+    },
+    setDialogMessage(state, action) {
+      state.dialogMsg = action.payload;
     },
   },
 });
@@ -49,10 +64,18 @@ const todoSlice = createSlice({
 const todoReducer = todoSlice.reducer;
 
 // Selector
-export const todoSelector = (state) => state.todoReducer.allTodo;
+export const todoSelector = (state) => state.todoReducer;
 
 // Export
-export const { addTodo, updateTodo, selectTodo, deleteTodo } =
-  todoSlice.actions;
+export const {
+  addTodo,
+  updateTodo,
+  selectTodo,
+  deleteTodo,
+  loadTodo,
+  deleteAll,
+  setDeleteMode,
+  setDialogMessage,
+} = todoSlice.actions;
 
 export default todoReducer;

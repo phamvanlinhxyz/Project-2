@@ -29,14 +29,18 @@
 .td-dialog-content-text {
   display: flex;
   align-items: center;
+  margin-bottom: 32px;
 }
 
 .td-dialog-content-btn {
   display: flex;
   justify-content: space-between;
+  flex-direction: row-reverse;
 }
 
 .td-text-icon {
   font-size: 48px;
   margin-right: 8px;
+  display: flex;
+  align-items: center;
 }

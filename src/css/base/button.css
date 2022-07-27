@@ -11,17 +11,17 @@
 .td-btn-sm {
   padding: 0 8px;
   height: 24px;
-  border-radius: 3px;
+  border-radius: 2px;
 }
 .td-btn-md {
   padding: 0 12px;
   height: 28px;
-  border-radius: 4px;
+  border-radius: 3px;
 }
 .td-btn-lg {
   padding: 0 16px;
   height: 32px;
-  border-radius: 6px;
+  border-radius: 4px;
 }
 
 /* CSS màu button */
@@ -31,10 +31,18 @@
   color: #fff;
 }
 
+.td-btn-prim:hover {
+  background-color: #38e1a3;
+}
+
 .td-btn-danger {
-  background-color: #f25c54;
+  background-color: #ff7477;
   border-color: #e5989b;
   color: #fff;
+}
+
+.td-btn-danger:hover {
+  background-color: #ff8e90;
 }
 
 .td-btn-second {

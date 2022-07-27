@@ -1,16 +1,16 @@
-import { createSlice } from '@reduxjs/toolkit';
+import { createSlice } from "@reduxjs/toolkit";
 
 const appSlice = createSlice({
-  name: 'app',
+  name: "app",
   initialState: {
-    addTodoArea: false,
+    isShowAddTodo: false,
     isShowDialog: false,
   },
   reducers: {
-    toggleArea(state, action) {
-      state.addTodoArea = !state.addTodoArea;
+    toggleArea(state) {
+      state.isShowAddTodo = !state.isShowAddTodo;
     },
-    toggleDialog(state, action) {
+    toggleDialog(state) {
       state.isShowDialog = !state.isShowDialog;
     },
   },
@@ -20,8 +20,7 @@ const appSlice = createSlice({
 const appReducer = appSlice.reducer;
 
 // Selector
-export const toggleSelector = (state) => state.appReducer.addTodoArea;
-export const dialogSelector = (state) => state.appReducer.isShowDialog;
+export const appSelector = (state) => state.appReducer;
 
 // Export
 export const { toggleArea, toggleDialog } = appSlice.actions;
